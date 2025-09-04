@@ -1,0 +1,46 @@
+.mass{
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0px 2px 10px ;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 5px;
+    margin: 100px auto;
+    width:300px;
+}
+
+
+
+.convert{
+    background-color: #4caf50;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    cursor: pointer;
+    width: 90%;
+    height: 30px;
+}
+
+.convert:hover{
+    background-color:  #326f33;
+
+}
+
+.result{
+    width: 85%;
+    height: 20px;
+}
+
+.to{
+    width: 85%;
+    height: 30px;
+}
+
+.from{
+    width: 85%;
+    height: 30px;
+}
+
+.input{
+    width: 85%;
+    height: 30px;
+}

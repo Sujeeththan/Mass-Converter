@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="mass">
+        <div class="converter">
+            <h2>Mass Converter</h2>
+        </div>
+
+        <div>
+            <input type="number" name="number" id="text" placeholder="Enter amount" class="input">
+        </div>
+        <br>
+        <div>
+            <select name="select" id="fromunit" class="from">
+                <option value="1">Kilograms(Kg)</option>
+                <option value="1000">Grams(g)</option>
+            </select>
+        </div>
+        <div>
+            <p>-- to --</p>
+        </div>
+
+        <div>
+            <select name="select" id="tounit" class="to">
+                <option value="1000">Grams(g)</option>
+                <option value="1">Kilograms(Kg)</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            <input type="button" value="Convert" class="convert" onclick="converter()">
+        </div>
+        <br>
+        <div id="result">
+            <input type="text" name="text"  readonly class="result">
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
