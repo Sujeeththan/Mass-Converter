@@ -4,43 +4,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Modern Mass Converter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="mass">
-        <div class="converter">
-            <h2>Mass Converter</h2>
-        </div>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+    
+    <div class="container">
+        <div class="card">
+            <h1>Mass Converter</h1>
+            
+            <div class="converter-box">
+                <div class="input-group">
+                    <label for="amount">Amount</label>
+                    <input type="number" id="amount" placeholder="0" class="input-field">
+                </div>
 
-        <div>
-            <input type="number" name="number" id="text" placeholder="Enter amount" class="input">
-        </div>
-        <br>
-        <div>
-            <select name="select" id="fromunit" class="from">
-                <option value="1">Kilograms(Kg)</option>
-                <option value="1000">Grams(g)</option>
-            </select>
-        </div>
-        <div>
-            <p>-- to --</p>
-        </div>
+                <div class="conversion-row">
+                    <div class="select-group">
+                        <label for="from-unit">From</label>
+                        <select id="from-unit" class="unit-select">
+                            <option value="kg">Kilograms (kg)</option>
+                            <option value="g">Grams (g)</option>
+                            <option value="mg">Milligrams (mg)</option>
+                            <option value="lb">Pounds (lb)</option>
+                            <option value="oz">Ounces (oz)</option>
+                        </select>
+                    </div>
 
-        <div>
-            <select name="select" id="tounit" class="to">
-                <option value="1000">Grams(g)</option>
-                <option value="1">Kilograms(Kg)</option>
-            </select>
-        </div>
-        <br>
-        <div>
-            <input type="button" value="Convert" class="convert" onclick="converter()">
-        </div>
-        <br>
-        <div id="result">
-            <input type="text" name="text"  readonly class="result">
+                    <button id="swap-btn" class="icon-btn" title="Swap Units">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 16V4M7 4L3 8M7 4L11 8M17 8v12M17 20l4-4M17 20l-4-4"/></svg>
+                    </button>
+
+                    <div class="select-group">
+                        <label for="to-unit">To</label>
+                        <select id="to-unit" class="unit-select">
+                            <option value="g">Grams (g)</option>
+                            <option value="kg">Kilograms (kg)</option>
+                            <option value="mg">Milligrams (mg)</option>
+                            <option value="lb">Pounds (lb)</option>
+                            <option value="oz">Ounces (oz)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="result-box">
+                    <span id="result-text">0</span>
+                    <span id="result-unit">g</span>
+                </div>
+            </div>
         </div>
     </div>
     <script src="script.js"></script>
